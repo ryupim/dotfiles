@@ -228,7 +228,7 @@ alias diff='diff -U1'
 alias tree='tree -N'
 # My alias
 alias todo='vim ~/Desktop/todo/todo.md'
-alias today='vim ~/Desktop/todo/today-todo.md'
+alias today='vim ~/Documents/todo/today-todo.md'
 alias aws-mfa='aws-mfa --profile sample'
 case ${OSTYPE} in
   darwin*)

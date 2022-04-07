@@ -139,6 +139,11 @@
   vnoremap t x
   nnoremap tt dd
   nnoremap T D
+
+  map <Leader>mn  :MemoNew<CR>
+  map <Leader>ml  :MemoList<CR>
+  map <Leader>mg  :MemoGrep<CR>
+
 ""}}}
 
 
@@ -223,9 +228,11 @@
   Plug 'puremourning/vimspector'                                "Debugger
   Plug 'cohama/lexima.vim'                                      "括弧自動補完
   Plug 'justmao945/vim-clang'                                   "c/c++ 補完
+  Plug 'pangloss/vim-javascript'                                "javascript sysntax highlight
   Plug 'leafgarland/typescript-vim'
   Plug 'rust-lang/rust.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}               "Rust コード補完 構文チェック
+  Plug 'glidenote/memolist.vim'                                 "vim メモプラグイン
   
   call plug#end()
   packloadall  "全てのプラグインをロードする
