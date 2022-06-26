@@ -209,31 +209,46 @@
   endif
   call plug#begin()  " Manage plugins with vim-plug.
   
-  Plug 'ctrlpvim/ctrlp.vim'                                     "Ctrl+pで曖昧検索
-  Plug 'easymotion/vim-easymotion'                              "移動コマンド
-  Plug 'mileszs/ack.vim'                                        "ack 統合
-  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }        "vim上でディレクトリの参照
+  " 一般
+  Plug 'christoomey/vim-tmux-navigator'                         "tmuxとの統合
   Plug 'tpope/vim-unimpaired'                                   "一連の便利なショートカット
   Plug 'tpope/vim-vinegar'                                      " - でnetrwを開く
   Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }       "補完プラグイン
   Plug 'sjl/gundo.vim'                                          "アンドゥツリーの可視化
-  Plug 'tpope/vim-fugitive'
-  Plug 'christoomey/vim-tmux-navigator'                         "tmuxとの統合
-  Plug 'tpope/vim-dispatch'
-  Plug 'janko-m/vim-test'                                       "テスト検証のプラグイン
-  "Plug 'vim-syntastic/syntastic' "pythonファイルのシンタクスチ  ク. 追加すると少し処理が重くなる
-  Plug 'vim-scripts/ScrollColors'                               "カラースキーム
-  Plug 'flazz/vim-colorschemes'                                 "カラースキーム
   Plug 'vim-airline/vim-airline'                                "ステータスラインの表示
-  Plug 'puremourning/vimspector'                                "Debugger
   Plug 'cohama/lexima.vim'                                      "括弧自動補完
+  " 検索
+  Plug 'ctrlpvim/ctrlp.vim'                                     "Ctrl+pで曖昧検索
+  Plug 'mileszs/ack.vim'                                        "ack 統合
+  " 移動
+  Plug 'easymotion/vim-easymotion'                              "移動コマンド
+  Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }        "vim上でディレクトリの参照
+  " Debug / Compile / Test
+  Plug 'vim-scripts/SingleCompile'                              "コンパイル/実行
+  Plug 'janko-m/vim-test'                                       "テスト検証のプラグイン
+  Plug 'puremourning/vimspector'                                "Debugger
+  " ColorScheme
+  Plug 'vim-scripts/ScrollColors'                               
+  Plug 'flazz/vim-colorschemes'                                 
+  " Git
+  Plug 'tpope/vim-fugitive'
+
+  " Programing Language
+  Plug 'rhysd/vim-clang-format'                                 "Format your C family code
+  "" C++
   Plug 'justmao945/vim-clang'                                   "c/c++ 補完
+  "" Python
+  "Plug 'vim-syntastic/syntastic' "pythonファイルのシンタクスチェック. 追加すると少し処理が重くなる
+  "" JavaScript / TypeScript
   Plug 'pangloss/vim-javascript'                                "javascript sysntax highlight
   Plug 'leafgarland/typescript-vim'
-  Plug 'rust-lang/rust.vim'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}               "Rust コード補完 構文チェック
+  "" Rust
+  Plug 'rust-lang/rust.vim'                                     "Rust コード補完 構文チェック
+
+  " 検証中
   Plug 'glidenote/memolist.vim'                                 "vim メモプラグイン
-  
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}               "VSCodeのような保管プラグイン
+
   call plug#end()
   packloadall  "全てのプラグインをロードする
   silent! helptags ALL  "すべてのプラグインようにヘルプファイルをロードする

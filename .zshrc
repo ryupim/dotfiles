@@ -178,7 +178,8 @@ fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
 setopt auto_param_slash
-
+# kubectl completion
+source <(kubectl completion zsh)
 
 # -----------------------------
 # History
