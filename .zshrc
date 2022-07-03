@@ -340,10 +340,15 @@ TIMEFMT=$'\n\n========================\nProgram : %J\nCPU     : %P\nuser    : %*
 # -----------------------------
 # PATH Env
 # -----------------------------
+
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
 fi
 
+# cargo
 export PATH=$HOME/.cargo/bin:$PATH
+
+# krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
