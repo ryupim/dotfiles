@@ -62,7 +62,7 @@ function left-prompt {
 
   user="${back_color}${name_b}${text_color}${name_t}"
   dir="${back_color}${path_b}${text_color}${path_t}"
-  echo "[%T] %B${user}%n@%m${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%~${reset}${text_color}${path_b}${sharp}%b${reset}\n${text_color}${arrow}> ${reset}"
+  echo "[%T] %B${user}%n@%m${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%c${reset}${text_color}${path_b}${sharp}%b${reset}\n${text_color}${arrow}> ${reset}"
 #PROMPT="%B%F{green}❯❯%f%b [%T]%B%F{green}%1(v|%1v|)%f%b  %B%F{blue}%~%f%b
 }
 
@@ -131,6 +131,10 @@ setopt prompt_subst
 
 # プロンプトの右側にメソッドの結果を表示させる
 RPROMPT='`rprompt-git-current-branch`'
+
+# kube-ps1
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
 
 
 
@@ -227,6 +231,7 @@ alias ..='c ../'
 alias back='pushd'
 alias diff='diff -U1'
 alias tree='tree -N'
+alias k='kubectl'
 # My alias
 alias todo='vim ~/Desktop/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
