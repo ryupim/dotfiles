@@ -212,10 +212,10 @@ alias -g H='| head'
 alias -g G='| grep'
 alias -g GI='| grep -ri'
 # Local Alias
+alias ls='exa'
 alias ll='ls -lF'
 alias lla='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
 alias so='source'
 alias sz='source ~/.zshrc'
 alias vi='vim'
@@ -348,6 +348,7 @@ TIMEFMT=$'\n\n========================\nProgram : %J\nCPU     : %P\nuser    : %*
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
 fi
