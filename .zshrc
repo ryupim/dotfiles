@@ -203,6 +203,19 @@ setopt inc_append_history
 setopt hist_verify
 
 
+## cdr, add-zsh-hook を有効化
+# http://wada811.blogspot.com/2014/09/zsh-cdr.html
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
+
+# cdr の設定
+zstyle ':completion:*' recent-dirs-insert both
+zstyle ':chpwd:*' recent-dirs-max 500
+zstyle ':chpwd:*' recent-dirs-default true
+zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/shell/chpwd-recent-dirs"
+zstyle ':chpwd:*' recent-dirs-pushd true
+
+
 # -----------------------------
 # Alias
 # -----------------------------
@@ -215,13 +228,13 @@ alias -g GI='| grep -ri'
 alias ls='exa'
 alias ll='ls -lF'
 alias lla='ls -alF'
-alias la='ls -A'
+alias la='ls -a'
 alias so='source'
 alias sz='source ~/.zshrc'
 alias vi='vim'
 alias vz='vim ~/.zshrc'
 alias vv='vim ~/.vimrc'
-alias c='cdr'
+alias cdr='cdr -l'
 alias h='fc -lt '%f %t' 1'      # show date in history
 alias cp='cp -i'
 alias rm='rm -i'
@@ -232,10 +245,9 @@ alias back='pushd'
 alias diff='diff -U1'
 alias tree='tree -N'
 alias k='kubectl'
-# My alias
-alias todo='vim ~/Desktop/todo/todo.md'
+alias py='python'
+alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
-alias aws-mfa='aws-mfa --profile sample'
 case ${OSTYPE} in
   darwin*)
     # Mac setting
