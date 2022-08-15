@@ -1,5 +1,5 @@
 # author: ryupim
-# .zshrc
+# .zshrc_Ubuntu
 
 # -----------------------------
 # Lang
@@ -233,6 +233,8 @@ alias so='source'
 alias sz='source ~/.zshrc'
 alias vi='vim'
 alias vz='vim ~/.zshrc'
+alias vzu='vim ~/Work/dotfiles/.zsh/.zshrc_Ubuntu'
+alias vzm='vim ~/Work/dotfiles/.zsh/.zshrc_Mac'
 alias vv='vim ~/.vimrc'
 alias cdr='cdr -l'
 alias h='fc -lt '%f %t' 1'      # show date in history
@@ -246,6 +248,7 @@ alias diff='diff -U1'
 alias tree='tree -N'
 alias k='kubectl'
 alias py='python'
+alias jupy='jupyter-notebook'
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
 alias todo='vim ~/Documents/todo/todo.md'
