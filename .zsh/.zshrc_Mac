@@ -250,6 +250,13 @@ alias k='kubectl'
 alias py='python'
 alias jupy='jupyter-notebook'
 alias ctags="`brew --prefix`/bin/ctags"
+# git command
+alias gi='git init'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gb='git branch'
+alias gp='git push'
+# edit documents
 alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
 
