@@ -250,7 +250,6 @@ alias co='code .'
 alias k='kubectl'
 alias py='python'
 alias jupy='jupyter-notebook'
-alias ctags="`brew --prefix`/bin/ctags"
 # git command
 alias gi='git init'
 alias ga='git add .'
@@ -261,6 +260,8 @@ alias gpl='git pull'
 # edit documents
 alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
+# exclusive mac
+alias ctags="`brew --prefix`/bin/ctags"
 
 
 # -----------------------------

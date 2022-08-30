@@ -250,8 +250,6 @@ alias co='code .'
 alias k='kubectl'
 alias py='python'
 alias jupy='jupyter-notebook'
-alias pbcopy="xclip -selection clipboard"
-alias pbpaste="xclip -selection clipboard -o"
 # git command
 alias gi='git init'
 alias ga='git add .'
@@ -262,6 +260,10 @@ alias gpl='git pull'
 # edit documents
 alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
+# exclusive ubutu
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
+alias aptdo='sudo apt update && sudo apt upgrade'
 
 
 # -----------------------------
