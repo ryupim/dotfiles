@@ -5,7 +5,7 @@
 # Lang
 # -----------------------------
 # 日本語を使用
-export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
 
 
 # -----------------------------
@@ -268,8 +268,8 @@ alias ctags="`brew --prefix`/bin/ctags"
 # My Function
 # -----------------------------
 function memo() {
-    mkdir -p ~/Memo
-    cd ~/Memo
+    mkdir -p ~/memo
+    cd ~/memo
     filename=`date "+%Y%m%d-Memo.md"`
     if [ ! -f $filename ];then
       date "+# %Y%m%d-Memo" > $filename

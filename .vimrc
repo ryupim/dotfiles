@@ -30,7 +30,7 @@
   set tabstop=4 "tabのの幅設定
   set expandtab
   set shiftwidth=2 "自動的に入力されたインデントの空白をつ2文字に設定
-  set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮ "不可視文字の指定
+  "set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮ "不可視文字の指定
   "set whichwrap=b,s,h,l,<,>,[,],~ "行頭、行末で行のカーソル移動を可能にする
   set backspace=indent,eol,start "バックスペースでの行移動を可能にする
   autocmd InsertLeave * set nopaste
@@ -307,8 +307,8 @@
     
     " Make <CR> auto-select the first completion item and notify coc.nvim to
     " format on enter, <cr> could be remapped by other vim plugin
-    inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                                  \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+    "inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+    "                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
     
     " GoTo code navigation.
     nmap <silent> gd <Plug>(coc-definition)
