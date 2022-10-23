@@ -186,18 +186,18 @@
 ""}}}
 
 
-"""====== Row and column highlighting ====={{{
+""====== Row and column highlighting ====={{{
   "" 行を強調表示
   "set cursorline
   "highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
   "" アンダーラインを引く(gui)
-  """highlight CursorLine gui=underline guifg=NONE guibg=NONE
+  ""highlight CursorLine gui=underline guifg=NONE guibg=NONE
   "" 列を強調表示
   "set cursorcolumn
-"""}}}
+""}}}
 
 
-"""====== Plugin Management ====={{{
+""====== Plugin Management ====={{{
   "
   let g:plug_timeout = 300  " Increase vim-plug timeout for YouCompleteMe.
   
@@ -261,6 +261,7 @@
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") &&
        \ b:NERDTree.isTabTree()) | q | endif
   ""}}
+
   
   "" === YouCompleteMe === {{
     let g:ycm_global_ycm_extra_conf = '${HOME}/.ycm_extra_conf.py'
@@ -269,15 +270,18 @@
     let g:ycm_autoclose_preview_window_after_insertion = 1
     set splitbelow
   ""}}
+
   
   "" === Gundo === {{
     noremap <f5> :GundoToggle<cr>  " Map Gundo to <F5>.
     let g:gundo_prefer_python3 = 1
   ""}}
+
   
   "" === vim-Test === {{
     let test#strategy = "dispatch"
   ""}}
+
   
   "" === Syntastic === {{
     set statusline+=%#warningmsg#
@@ -289,6 +293,7 @@
     let g:syntastic_check_on_wq = 0
     let g:syntastic_python_pylint_exe = 'pylint3'
   ""}}
+
 
   "" === Rust === {{
     let g:rustfmt_autosave = 1
@@ -317,17 +322,17 @@
     nmap <silent> gr <Plug>(coc-references)
   ""}}
   
-"""}}}
+""}}}
 
 
-"""====== Build ====={{{
+""====== Build ====={{{
   " Use :make to run pylint for Python files.
   autocmd filetype python setlocal makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
   autocmd filetype python setlocal errorformat=%f:%l:\ %m
-"""}}}
+""}}}
 
 
-"""====== ColorScheme ====={{{
+""====== ColorScheme ====={{{
   set t_Co=256
   set background=dark
   colorscheme PaperColor
@@ -336,7 +341,7 @@
   
   " - my favorite colorscheme list - "
   " darkblue, 
-"""}}}
+""}}}
 
 
 ""==============================================================================
