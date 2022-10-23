@@ -209,7 +209,7 @@
   endif
   call plug#begin()  " Manage plugins with vim-plug.
   
-  " 一般
+  " General
   Plug 'christoomey/vim-tmux-navigator'                         "tmuxとの統合
   Plug 'tpope/vim-unimpaired'                                   "一連の便利なショートカット
   Plug 'tpope/vim-vinegar'                                      " - でnetrwを開く
@@ -217,10 +217,11 @@
   Plug 'sjl/gundo.vim'                                          "アンドゥツリーの可視化
   Plug 'vim-airline/vim-airline'                                "ステータスラインの表示
   Plug 'cohama/lexima.vim'                                      "括弧自動補完
-  " 検索
+  Plug 'glidenote/memolist.vim'                                 "vim メモプラグイン
+  " Research
   Plug 'ctrlpvim/ctrlp.vim'                                     "Ctrl+pで曖昧検索
   Plug 'mileszs/ack.vim'                                        "ack 統合
-  " 移動
+  " Motion
   Plug 'easymotion/vim-easymotion'                              "移動コマンド
   Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }        "vim上でディレクトリの参照
   " Debug / Compile / Test
@@ -245,14 +246,15 @@
   "" Rust
   Plug 'rust-lang/rust.vim'                                     "Rust コード補完 構文チェック
 
-  " 検証中
-  Plug 'glidenote/memolist.vim'                                 "vim メモプラグイン
+  " Verification
+  Plug 'itchyny/lightline.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}               "VSCodeのような保管プラグイン
 
   call plug#end()
-  packloadall  "全てのプラグインをロードする
-  silent! helptags ALL  "すべてのプラグインようにヘルプファイルをロードする
-  " 保存し終えたら :w | source $MYVIMRC | PlugInstall
+  packloadall  " Load all plugins
+  silent! helptags ALL  " Load help file
+  " Install plugin command
+  " :source $MYVIMRC | PlugInstall
   
   
   "" === NERDTree === {{
