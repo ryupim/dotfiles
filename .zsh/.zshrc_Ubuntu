@@ -272,9 +272,9 @@ alias aptdo='sudo apt update && sudo apt upgrade'
 function memo() {
     mkdir -p ~/memo
     cd ~/memo
-    filename=`date "+%Y%m%d-Memo.md"`
+    filename=`date "+%Y-%m-%d-Memo.md"`
     if [ ! -f $filename ];then
-      date "+# %Y%m%d-Memo" > $filename
+      date "+# %Y-%m-%d-Memo" > $filename
     fi
     vim $filename
 }
