@@ -1,6 +1,6 @@
 "### RYU's VIMRC ###
 
-""===== General ====={{{
+"" ===== General ===== {{{
   "set directory=$HOME/.vim/swap// "swapファイルの保存場所指定
   "set undofile "全てのファイルについて永続アンドゥを有効化
   "if !isdirectory(expand("$home/.vim/undodir"))
@@ -11,7 +11,7 @@
 ""}}}
 
 
-""===== Display ====={{{
+"" ===== Display ===== {{{
   syntax on "コードに色をつける
   set number "行数表示
   set title "編集中のファイル名の表示
@@ -23,7 +23,7 @@
 ""}}}
 
 
-""===== Character, Moving cursor ======{{{
+"" ===== Character, Moving cursor ====== {{{
   set fenc=utf-8 "文字コードを指定
   set virtualedit=onemore "カーソルを行末の一つ先まで移動可能にする
   set autoindent "自動インデント
@@ -37,7 +37,7 @@
 ""}}}
 
 
-""===== Indent ====={{{
+"" ===== Indent ===== {{{
   " ファイルタイプ検出を有効にする
   "filetype on
   filetype plugin indent on
@@ -53,7 +53,7 @@
 ""}}}
 
 
-""===== Search ====={{{
+"" ===== Search ===== {{{
   set ignorecase "大文字/小文字の区別なし
   set smartcase "検索文字列に大文字が入っている場合は区別する
   set wrapscan "最後まで検索したら最初の行に戻る
@@ -71,7 +71,7 @@
 ""}}}
 
 
-""===== Moving Window ====={{{
+"" ===== Moving Window ===== {{{
   nnoremap s <Nop>
   nnoremap sj <C-w>j
   nnoremap sk <C-w>k
@@ -82,7 +82,6 @@
   nnoremap sL <C-w>L
   nnoremap sH <C-w>H
   nnoremap sr <C-w>r
-  "window resizeでは、行頭に数字を入力することで一気にresize可能
   nnoremap s= <C-w>= 
   nnoremap s- <C-w>-
   nnoremap s+ <C-w>+
@@ -93,19 +92,12 @@
   nnoremap sN :<C-u>bn<CR>
   nnoremap sP :<C-u>bp<CR>
   nnoremap st :<C-u>tabnew<CR>
-  nnoremap sT :<C-u>Unite tab<CR>
-  "nnoremap ss :<C-u>sp<CR>
-  "nnoremap sv :<C-u>vs<CR>
   nnoremap sq :<C-u>q<CR>
   nnoremap sQ :<C-u>bd<CR>
-  nnoremap sb :<C-u>Unite buffer_tab -buffer-name=file<CR>
-  nnoremap sB :<C-u>Unite buffer -buffer-name=file<CR>
-  
-  command! Bd :bp | :sp | :bn | :bd
 ""}}}
 
 
-""===== Key Input ====={{{
+"" ===== Key Input ===== {{{
   "Ctrl+jキーでESCキー
   inoremap <silent> <C-j> <Esc>
   
@@ -125,9 +117,9 @@
   "inoremap <C-,> <Up>
   "inoremap <C-.> <Left>
   "inoremap <C-/> <Right>
-  "vnoremap d "_d
   
   "削除と切り取りを明確に使い分ける
+  vnoremap d "_d
   nnoremap d "_d
   vnoremap D "_D
   nnoremap D "_D
@@ -140,16 +132,19 @@
   nnoremap tt dd
   nnoremap T D
 
+  "Memo
   map <Leader>mn  :MemoNew<CR>
   map <Leader>ml  :MemoList<CR>
   map <Leader>mg  :MemoGrep<CR>
 
+  "置換
+  nnoremap <expr> S* ':%s/\<' . expand('<cword>') . '\>/'
 ""}}}
 
 
 
 
-""===== Character Encoding ====={{{
+"" ===== Character Encoding ===== {{{
   "if &comptable
   "	set nocomptable
   "endif
@@ -159,7 +154,7 @@
 ""}}}
 
 
-""===== Tag / Jump =====""{{{
+"" ===== Tag / Jump ===== {{{
   noremap <leader>] :YcmCompleter GoTo<cr>
   set tags=.tags;$HOME  " Look for a tags file recursively in parent directories.
   
@@ -186,7 +181,7 @@
 ""}}}
 
 
-""====== Row and column highlighting ====={{{
+"" ====== Row and column highlighting ===== {{{
   "" 行を強調表示
   "set cursorline
   "highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
@@ -197,7 +192,7 @@
 ""}}}
 
 
-""====== Plugin Management ====={{{
+"" ====== Plugin Management ===== {{{
   "
   let g:plug_timeout = 300  " Increase vim-plug timeout for YouCompleteMe.
   
@@ -327,14 +322,14 @@
 ""}}}
 
 
-""====== Build ====={{{
+"" ====== Build ===== {{{
   " Use :make to run pylint for Python files.
   autocmd filetype python setlocal makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
   autocmd filetype python setlocal errorformat=%f:%l:\ %m
 ""}}}
 
 
-""====== ColorScheme ====={{{
+"" ====== ColorScheme ===== {{{
   set t_Co=256
   set background=dark
   colorscheme PaperColor
