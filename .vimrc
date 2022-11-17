@@ -192,6 +192,11 @@
 ""}}}
 
 
+"" ====== Custom command ===== {{{
+  command Vterm :vert term
+""}}}
+
+
 "" ====== Plugin Management ===== {{{
   "
   let g:plug_timeout = 300  " Increase vim-plug timeout for YouCompleteMe.
