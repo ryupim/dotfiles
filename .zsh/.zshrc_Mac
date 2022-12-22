@@ -257,6 +257,9 @@ alias gc='git commit -m'
 alias gb='git branch'
 alias gph='git push'
 alias gpl='git pull'
+# cargo commnad
+alias cnew='cargo new'
+alias crun='cargo run'
 # edit documents
 alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
@@ -373,5 +376,12 @@ export PATH=$HOME/.cargo/bin:$PATH
 # krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# npm
+export PATH=$PATH:./node_modules/.bin
+
 # openssl
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+# Wasmer
+export WASMER_DIR="/home/softbank/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
