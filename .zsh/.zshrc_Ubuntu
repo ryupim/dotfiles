@@ -260,6 +260,7 @@ alias gpl='git pull'
 # cargo commnad
 alias cnew='cargo new'
 alias crun='cargo run'
+alias cbuild='cargo build'
 # edit documents
 alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
