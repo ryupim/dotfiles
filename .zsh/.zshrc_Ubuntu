@@ -265,6 +265,7 @@ alias cbuild='cargo build'
 # edit documents
 alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
+alias often='vim ~/Documents/todo/often-words.md'
 # exclusive ubutu
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
@@ -284,6 +285,7 @@ function memo() {
       date "+# %Y-%m-%d-Memo" > $filename
     fi
     vim $filename
+    cd -
 }
 
 function backcp() {

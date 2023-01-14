@@ -264,6 +264,7 @@ alias cbuild='cargo build'
 # edit documents
 alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
+alias often='vim ~/Documents/todo/often-words.md'
 # exclusive mac
 alias ctags="`brew --prefix`/bin/ctags"
 
@@ -279,6 +280,7 @@ function memo() {
       date "+# %Y-%m-%d-Memo" > $filename
     fi
     vim $filename
+    cd -
 }
 
 function backcp() {
