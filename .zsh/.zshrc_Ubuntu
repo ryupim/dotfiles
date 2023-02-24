@@ -262,6 +262,7 @@ alias cnew='cargo new'
 alias cadd='cargo add'
 alias crun='cargo run'
 alias cbuild='cargo build'
+alias catest='cargo test'
 # edit documents
 alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
@@ -272,6 +273,7 @@ alias pbpaste="xclip -selection clipboard -o"
 alias aptup='sudo apt update'
 alias aptls='apt list --upgradable'
 alias aptug='sudo apt upgrade -y'
+alias shutnow='sudo shutdown now -h'
 
 
 # -----------------------------

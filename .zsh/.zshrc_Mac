@@ -259,8 +259,10 @@ alias gph='git push'
 alias gpl='git pull'
 # cargo commnad
 alias cnew='cargo new'
+alias cadd='cargo add'
 alias crun='cargo run'
 alias cbuild='cargo build'
+alias catest='cargo test'
 # edit documents
 alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
