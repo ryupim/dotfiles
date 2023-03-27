@@ -184,6 +184,9 @@ autoload -U compinit && compinit
 setopt auto_param_slash
 # kubectl completion
 source <(kubectl completion zsh)
+# helm
+helm completion zsh > "${fpath[1]}/_helm"
+
 
 # -----------------------------
 # History
@@ -225,10 +228,18 @@ alias -g H='| head'
 alias -g G='| grep'
 alias -g GI='| grep -ri'
 # Local Alias
-alias ls='exa'
-alias ll='ls -lF'
-alias lla='ls -alF'
-alias la='ls -a'
+if [[ $(command -v exa) ]]; then
+  alias ls='exa'
+  alias ll='exa --icons -alF'
+  alias l1='exa -1'
+  alias lt='exa -Ta --icons -I "node_modeuls|.git|.cache|vendor|tmp"'
+  alias ltl='lt | less -r'
+else
+  alias ll='ls -alF'
+  alias l1='ls -1'
+  alias lt='tree -I "node_modules|.git|.cache|vendor|tmp"'
+  alias ltl='lt | less -r'
+fi
 alias so='source'
 alias sz='source ~/.zshrc'
 alias vi='vim'
