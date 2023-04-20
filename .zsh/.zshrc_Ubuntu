@@ -261,6 +261,7 @@ alias co='code .'
 alias k='kubectl'
 alias py='python'
 alias jupy='jupyter-notebook'
+alias dr='docker'
 # git command
 alias gi='git init'
 alias ga='git add .'
@@ -268,7 +269,7 @@ alias gc='git commit -m'
 alias gb='git branch'
 alias gph='git push'
 alias gpl='git pull'
-# cargo commnad
+# cargo command
 alias cnew='cargo new'
 alias cadd='cargo add'
 alias crun='cargo run'
@@ -278,7 +279,7 @@ alias catest='cargo test'
 alias todo='vim ~/Documents/todo/todo.md'
 alias today='vim ~/Documents/todo/today-todo.md'
 alias often='vim ~/Documents/todo/often-words.md'
-# exclusive ubutu
+# only ubutu
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
 alias aptup='sudo apt update'
